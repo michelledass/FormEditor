@@ -22,12 +22,12 @@
   background-color: #f0f0f0;
   padding: 1rem;
   border-right: 1px solid #ddd;
-  height: 100%; /* Full height */
+  height: 100%; 
   max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: auto; /* Scrollable if content overflows */
+  overflow-y: auto; 
 }
 
 .left-panel ul {

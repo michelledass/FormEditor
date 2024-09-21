@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Button, IconButton, TextField, Box } from '@mui/material';
 import './App.css';
-import myImage from './assets/1.png';  // Importing the image from src/assets
+import myImage from './assets/1.png'; 
 
 function App() {
-  const [activeOption, setActiveOption] = useState(null); // Tracks which screen is active
+  const [activeOption, setActiveOption] = useState(null); 
   const [rightPaneTitle, setRightPaneTitle] = useState('Welcome to our form');
   const [rightPaneDescription, setRightPaneDescription] = useState('This is a description of the form');
-  const [image, setImage] = useState(myImage); // Store the default image from folder
-  const [alignment, setAlignment] = useState('left'); // Alignment state for image and text
+  const [image, setImage] = useState(myImage); 
+  const [alignment, setAlignment] = useState('left'); 
   const [email, setEmail] = useState('');
 
   const handleImageUpload = (e) => {
@@ -26,7 +26,6 @@ function App() {
     setImage(null);
   };
 
-  // Function to handle alignment change
   const handleAlignmentChange = () => {
     setAlignment(alignment === 'left' ? 'right' : 'left');
   };
@@ -37,7 +36,6 @@ function App() {
     setRightPaneDescription('This will be used to contact you for the next steps.');
   };
 
-  // Email validation function
   const validateEmail = () => {
     if (!email.includes('@') || !email.includes('.')) {
       alert('Email is missing @ or .');
@@ -48,7 +46,7 @@ function App() {
     setActiveOption(null);
     setRightPaneTitle('Welcome to our form');
     setRightPaneDescription('This is a description of the form');
-    setImage(myImage);  // Reset to default image when switching back
+    setImage(myImage); 
   };
 
   return (
@@ -144,7 +142,6 @@ function App() {
             </div>
           )}
 
-          {/* Default Options List */}
           {!activeOption && (
             <div>
               <h2>Steps</h2>
@@ -169,7 +166,6 @@ function App() {
           )}
         </div>
 
-        {/* Right Panel */}
         <div className="right-panel">
           <Box
             sx={{
@@ -189,7 +185,7 @@ function App() {
                   label="Enter Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  onBlur={validateEmail} // Validate email when the field loses focus
+                  onBlur={validateEmail} 
                 />
               )}
             </div>

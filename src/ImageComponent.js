@@ -1,5 +1,5 @@
 import React from 'react';
-import myImage from '../assets/1.png'; // Importing from assets folder
+import myImage from '../assets/1.png'; 
 
 function ImageComponent() {
   return (
